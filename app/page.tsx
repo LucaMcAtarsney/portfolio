@@ -18,9 +18,9 @@ export default function Home() {
           </p>
         </div>
         <DodecahedronScene />
-        <ComputerModel />
+        {/* <ComputerModel />
         <CameraModel />
-        <KeyboardModel />
+        <KeyboardModel /> */}
       </section>
 
       {/* ABOUT SECTION */}
@@ -51,9 +51,24 @@ export default function Home() {
           {["Programming", "Design", "Music", "Photography"].map((title, i) => (
             <div
               key={i}
-              className="bg-white/10 border border-gray-700 backdrop-blur-md text-white rounded-xl p-6 h-40 flex items-center justify-center text-xl font-medium shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out"
+              className="relative bg-white/10 border border-gray-700 backdrop-blur-md text-white rounded-xl p-6 h-40 flex items-center justify-center text-xl font-medium shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out"
             >
               {title}
+              {title === "Programming" && (
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-75">
+                  <ComputerModel />
+                </div>
+              )}
+              {title === "Music" && (
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-75">
+                  <KeyboardModel />
+                </div>
+              )}
+              {title === "Photography" && (
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-75">
+                  <CameraModel />
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -85,9 +100,7 @@ export default function Home() {
 
       {/* CONTACT SECTION */}
       <section className="py-24 px-6 border-t border-gray-800 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-10">
-          CONTACT INFO
-        </h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-10">CONTACT INFO</h2>
         <div className="space-y-6 text-gray-300">
           <div>
             <p className="text-sm tracking-wide text-gray-500">PHONE</p>
