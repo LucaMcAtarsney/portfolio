@@ -1,6 +1,8 @@
 import DodecahedronScene from "@/components/DodecahedronScene";
 import Image from "next/image";
 import ComputerModel from "@/components/Computer";
+import CameraModel from "@/components/Camera";
+import KeyboardModel from "@/components/Keyboard";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
         </div>
         <DodecahedronScene />
         <ComputerModel />
+        <CameraModel />
+        <KeyboardModel />
       </section>
 
       {/* ABOUT SECTION */}
