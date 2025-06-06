@@ -3,6 +3,7 @@ import Image from "next/image";
 import ComputerModel from "@/components/Computer";
 import CameraModel from "@/components/Camera";
 import KeyboardModel from "@/components/Keyboard";
+import Cube from "@/components/cube";
 
 export default function Home() {
   return (
@@ -57,6 +58,11 @@ export default function Home() {
               {title === "Programming" && (
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-75">
                   <ComputerModel />
+                </div>
+              )}
+              {title === "Design" && (
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-75">
+                  <Cube />
                 </div>
               )}
               {title === "Music" && (
