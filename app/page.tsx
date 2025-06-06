@@ -18,7 +18,7 @@ export default function Home() {
             I like making stuff.
           </p>
         </div>
-        <DodecahedronScene />
+        <Cube />
         {/* <ComputerModel />
         <CameraModel />
         <KeyboardModel /> */}
@@ -61,8 +61,8 @@ export default function Home() {
                 </div>
               )}
               {title === "Design" && (
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-75">
-                  <Cube />
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-30">
+                  <DodecahedronScene />
                 </div>
               )}
               {title === "Music" && (

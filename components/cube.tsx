@@ -23,7 +23,7 @@ export default function Cube() {
         className="relative w-full h-full [transform-style:preserve-3d]"
       >
         <div
-          className={`${sideBase} bg-red-400 [transform:rotateY(0deg)_translateZ(100px)]`}
+          className={`${sideBase} bg-[url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1KtEbPj1Q4UUHgSncwLuJ3fvoKDpasa93gg&s)] [transform:rotateY(0deg)_translateZ(100px)]`}
         />
         <div
           className={`${sideBase} bg-orange-400 [transform:rotateY(90deg)_translateZ(100px)]`}
