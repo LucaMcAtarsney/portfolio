@@ -18,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
+          <a href="/test">Test</a>
         </header>
         {children}
         <footer className="text-center py-6 text-sm text-white-400">© 2025 Luca McAtarsney</footer>
