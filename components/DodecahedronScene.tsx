@@ -29,7 +29,6 @@ export default function DodecahedronScene() {
         <ambientLight intensity={0.6} />
         <directionalLight position={[10, 5, 3]} />
         <RotatingDodecahedron />
-        {/* No OrbitControls! */}
       </Canvas>
     </div>
   )

@@ -1,5 +1,6 @@
 import DodecahedronScene from "@/components/DodecahedronScene";
-import Image from 'next/image';
+import Image from "next/image";
+import ComputerModel from "@/components/Computer";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       {/* INTRO SECTION */}
       <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-10 py-24">
         <div className="pl-8 space-y-6 max-w-xl">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+          <h1 className="text-6xl md:text-6xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
             Hi, I&apos;m Luca McAtarsney
           </h1>
           <p className="text-lg md:text-2xl text-gray-400">
@@ -15,6 +16,7 @@ export default function Home() {
           </p>
         </div>
         <DodecahedronScene />
+        <ComputerModel />
       </section>
 
       {/* ABOUT SECTION */}
@@ -27,18 +29,18 @@ export default function Home() {
             projects ranging from scrapers to simulators.
           </p>
           <Image
-          src="/pentagon.svg"
-          alt="bot"
-          width={64}
-          height={64}
-          className="mx-auto mt-10 opacity-80 hover:rotate-6 transition-transform duration-300"
+            src="/pentagon.svg"
+            alt="bot"
+            width={64}
+            height={64}
+            className="mx-auto mt-10 opacity-80 hover:rotate-6 transition-transform duration-300"
           />
         </div>
       </section>
 
       {/* SKILLS SECTION */}
       <section className="py-24 px-6 border-t border-gray-800">
-        <h2 className="text-center text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
+        <h2 className="text-center text-4xl md:text-5xl font-bold mb-12">
           SKILLS
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -55,7 +57,7 @@ export default function Home() {
 
       {/* PROJECTS SECTION */}
       <section className="py-24 px-6 border-t border-gray-800">
-        <h2 className="text-center text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
+        <h2 className="text-center text-4xl md:text-5xl font-bold mb-12">
           PROJECTS
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -79,7 +81,7 @@ export default function Home() {
 
       {/* CONTACT SECTION */}
       <section className="py-24 px-6 border-t border-gray-800 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-10 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-bold mb-10">
           CONTACT INFO
         </h2>
         <div className="space-y-6 text-gray-300">
@@ -98,13 +100,13 @@ export default function Home() {
           <div className="flex justify-center gap-6 pt-6">
             {[1, 2, 3].map((n) => (
               <a key={n} href="#">
-              <Image
-                src="/pentagon.svg"
-                alt="bot"
-                width={64}
-                height={64}
-                className="mx-auto mt-10 opacity-80 hover:rotate-6 transition-transform duration-300"
-              />
+                <Image
+                  src="/pentagon.svg"
+                  alt="bot"
+                  width={64}
+                  height={64}
+                  className="mx-auto mt-10 opacity-80 hover:rotate-6 transition-transform duration-300"
+                />
               </a>
             ))}
           </div>
