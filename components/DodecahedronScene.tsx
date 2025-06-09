@@ -24,7 +24,7 @@ function RotatingDodecahedron() {
 
 export default function DodecahedronScene() {
   return (
-    <div className="w-full h-screen">
+    <div className="w-60 h-60">
       <Canvas camera={{ position: [2, 2, 2] }}>
         <ambientLight intensity={0.6} />
         <directionalLight position={[10, 5, 3]} />

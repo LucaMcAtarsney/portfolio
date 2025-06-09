@@ -4,12 +4,14 @@ import ComputerModel from "@/components/Computer";
 import CameraModel from "@/components/Camera";
 import KeyboardModel from "@/components/Keyboard";
 import Cube from "@/components/cube";
+import Link from "next/link";
+import { slugify } from "@/lib/slugify";
 
 export default function Home() {
   return (
     <main className="bg-black text-white font-sans scroll-smooth">
       {/* INTRO SECTION */}
-      <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-10 py-24">
+      <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-15 py-24">
         <div className="pl-8 space-y-6 max-w-xl">
           <h1 className="text-6xl md:text-6xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
             Hi, I&apos;m Luca McAtarsney
@@ -19,9 +21,6 @@ export default function Home() {
           </p>
         </div>
         <Cube />
-        {/* <ComputerModel />
-        <CameraModel />
-        <KeyboardModel /> */}
       </section>
 
       {/* ABOUT SECTION */}
@@ -33,49 +32,44 @@ export default function Home() {
             great to use. With over 3 years of experience, I’ve worked on
             projects ranging from scrapers to simulators.
           </p>
-          <Image
-            src="/pentagon.svg"
-            alt="bot"
-            width={64}
-            height={64}
-            className="mx-auto mt-10 opacity-80 hover:rotate-6 transition-transform duration-300"
-          />
         </div>
       </section>
 
       {/* SKILLS SECTION */}
       <section className="py-24 px-6 border-t border-gray-800">
-        <h2 className="text-center text-4xl md:text-5xl font-bold mb-12">
+        <h2 className="text-center text-4xl md:text-5xl font-bold mb-12 pb-20">
           SKILLS
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto">
           {["Programming", "Design", "Music", "Photography"].map((title, i) => (
-            <div
-              key={i}
-              className="relative bg-white/10 border border-gray-700 backdrop-blur-md text-white rounded-xl p-6 h-40 flex items-center justify-center text-xl font-medium shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out"
-            >
-              {title}
-              {title === "Programming" && (
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-75">
-                  <ComputerModel />
-                </div>
-              )}
-              {title === "Design" && (
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-30">
-                  <DodecahedronScene />
-                </div>
-              )}
-              {title === "Music" && (
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-75">
-                  <KeyboardModel />
-                </div>
-              )}
-              {title === "Photography" && (
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-75">
-                  <CameraModel />
-                </div>
-              )}
-            </div>
+            <Link href={slugify(title)}>
+              <div
+                key={i}
+                className="relative bg-white/10 border border-gray-700 backdrop-blur-md text-white rounded-xl p-10 h-40 flex items-center justify-center text-xl font-medium shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out"
+              >
+                {title}
+                {title === "Programming" && (
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-70 pl-15">
+                    <ComputerModel />
+                  </div>
+                )}
+                {title === "Design" && (
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-100 pb-45">
+                    <DodecahedronScene />
+                  </div>
+                )}
+                {title === "Music" && (
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-75 pl-12">
+                    <KeyboardModel />
+                  </div>
+                )}
+                {title === "Photography" && (
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-75 pl-10">
+                    <CameraModel />
+                  </div>
+                )}
+              </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -94,12 +88,14 @@ export default function Home() {
             "Mycelium",
             "Fishland Saga",
           ].map((title, i) => (
-            <div
-              key={i}
-              className="bg-white/10 border border-gray-700 backdrop-blur-md text-white rounded-xl p-6 h-40 flex items-center justify-center text-xl font-medium shadow-md hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out"
-            >
-              {title}
-            </div>
+            <Link href={slugify(title)}>
+              <div
+                key={i}
+                className="bg-white/10 border border-gray-700 backdrop-blur-md text-white rounded-xl p-6 h-40 flex items-center justify-center text-xl font-medium shadow-md hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out"
+              >
+                {title}
+              </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -119,19 +115,6 @@ export default function Home() {
             <a href="mailto:luca@dev.com" className="text-xl hover:underline">
               luca@dev.com
             </a>
-          </div>
-          <div className="flex justify-center gap-6 pt-6">
-            {[1, 2, 3].map((n) => (
-              <a key={n} href="#">
-                <Image
-                  src="/pentagon.svg"
-                  alt="bot"
-                  width={64}
-                  height={64}
-                  className="mx-auto mt-10 opacity-80 hover:rotate-6 transition-transform duration-300"
-                />
-              </a>
-            ))}
           </div>
         </div>
       </section>

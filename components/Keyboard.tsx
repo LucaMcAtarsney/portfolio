@@ -11,7 +11,7 @@ function Keyboard() {
 
   useFrame((_state, delta) => {
     if (ref.current) {
-      ref.current.rotation.z += delta * 0.5 // Adjust speed here
+      ref.current.rotation.z -= delta * 0.5 // Adjust speed here
     }
   })
 
