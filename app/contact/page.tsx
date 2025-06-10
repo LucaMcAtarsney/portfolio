@@ -1,4 +1,4 @@
-import Cube from "@/components/cube";
+import GithubModel from "@/components/Github";
 
 export default function CONTACT() {
     return (
@@ -9,9 +9,9 @@ export default function CONTACT() {
             <h2 className="text-4xl md:text-7xl font-bold ">Contact</h2>
             <p>pending...</p>
             </div>
-                <div className="pt-20">
+                <div className="min-h-screen flex flex-col md:flex-row items-center justify-between px-15 py-24">
                 
-                    <Cube />
+                    <GithubModel />
                 </div>
                 
             </section>

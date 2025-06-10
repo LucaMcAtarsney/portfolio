@@ -5,12 +5,26 @@ import KeyboardModel from "@/components/Keyboard";
 import Cube from "@/components/cube";
 import Link from "next/link";
 import { slugify } from "@/lib/slugify";
+import GithubModel from "@/components/Github";
 
 export default function Home() {
   return (
     <main className="text-white font-sans scroll-smooth">
       {/* INTRO SECTION */}
-      <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-15 py-24">
+      <div className="relative w-full h-[500px] scale-130">
+        {/* Overlay Text */}
+        <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl md:text-6xl font-extrabold tracking-tight z-10 pointer-events-none">
+          Pentgon.Dev
+        </h1>
+
+        {/* 3D Model */}
+        <div>
+          <GithubModel />
+        </div>
+        
+      </div>
+
+      <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-15 py-24 pt-200">
         <div className="pl-8 space-y-6 max-w-xl">
           <h1 className="text-6xl md:text-6xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
             Hi, I&apos;m Luca McAtarsney
