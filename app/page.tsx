@@ -11,9 +11,9 @@ export default function Home() {
   return (
     <main className="text-white font-sans scroll-smooth">
       {/* INTRO SECTION */}
-      <div className="relative w-full h-[500px] scale-130">
+      <div className="relative w-full h-[300px] scale-120">
         {/* Overlay Text */}
-        <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl md:text-6xl font-extrabold tracking-tight z-10 pointer-events-none">
+        <h1 className="pt-90 absolute inset-0 flex items-center justify-center text-white text-6xl md:text-6xl font-extrabold tracking-tight z-10 pointer-events-none">
           Pentgon.Dev
         </h1>
 
@@ -24,7 +24,7 @@ export default function Home() {
         
       </div>
 
-      <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-15 py-24 pt-200">
+      <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-15 py-24 pt-280">
         <div className="pl-8 space-y-6 max-w-xl">
           <h1 className="text-6xl md:text-6xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
             Hi, I&apos;m Luca McAtarsney
@@ -39,7 +39,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section className="py-24 px-6 ">
+      <section className="py-24 px-6 pt-40 ">
         <div className="text-center max-w-2xl mx-auto space-y-6">
           <h2 className="text-4xl md:text-5xl font-bold ">A LITTLE ABOUT ME</h2>
           <p className="text-gray-400 leading-relaxed text-lg">
@@ -51,8 +51,8 @@ export default function Home() {
       </section>
 
       {/* SKILLS SECTION */}
-      <section className="py-24 px-6">
-        <h2 className="text-center text-4xl md:text-5xl font-bold mb-12 pb-20">
+      <section className="py-24 px-6 pt-40">
+        <h2 className="text-center text-4xl md:text-5xl font-bold mb-12">
           SKILLS
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto">
@@ -87,7 +87,7 @@ export default function Home() {
       </section>
 
       {/* PROJECTS SECTION */}
-      <section className="py-24 px-6">
+      <section className="py-24 px-6 pt-40">
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-12">
           PROJECTS
         </h2>
@@ -110,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section className="py-24 px-6 text-center">
+      <section className="py-24 px-6 text-center pt-40">
         <h2 className="text-4xl md:text-5xl font-bold mb-10">CONTACT INFO</h2>
         <div className="space-y-6 text-gray-300">
           <div>

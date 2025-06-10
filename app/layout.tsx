@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.className} text-white font-sans relative overflow-x-hidden`}>
         <DotBackground />
 
-        <div className="relative z-10 min-h-screen flex flex-col">
+        <div className="relative z-100 min-h-screen flex flex-col">
           <header className="flex justify-center space-x-30 py-6 text-white-700">
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>

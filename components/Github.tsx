@@ -21,9 +21,9 @@ function Github() {
 export default function GithubModel() {
     return (
         <div className="w-full h-[1000px]" >
-            <Canvas camera={{ position: [0, 10, 4 ], fov: 150 }}>
+            <Canvas camera={{ position: [0, 10, 4 ], fov: 90 }}>
                 <ambientLight intensity={10.0} />
-                <directionalLight position={[-10, -10, -20]} />
+                <directionalLight position={[-10, -0, -20]} />
                 <Suspense fallback={-10}>
                     <Github />
                 </Suspense>
