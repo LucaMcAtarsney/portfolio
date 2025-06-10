@@ -27,7 +27,7 @@ export default function GithubModel() {
                 <Suspense fallback={-10}>
                     <Github />
                 </Suspense>
-                <OrbitControls enablePan={true} enableZoom={false} enableRotate={false} />
+                <OrbitControls enablePan={false} enableZoom={false} enableRotate={false} />
             </Canvas>
         </div>
     )
