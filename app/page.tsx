@@ -5,7 +5,6 @@ import KeyboardModel from "@/components/Keyboard";
 import Cube from "@/components/cube";
 import Link from "next/link";
 import { slugify } from "@/lib/slugify";
-import DotBackground from "@/components/ui/dot-background";
 
 export default function Home() {
   return (
@@ -20,13 +19,13 @@ export default function Home() {
             I like making stuff.
           </p>
         </div>
-        <div className="pr-90 scale-180">
+        <div className="pr-70 scale-160 pb-15">
           <Cube />
         </div>
       </section>
 
       {/* ABOUT SECTION */}
-      <section className="py-24 px-6 border-t border-gray-800 ">
+      <section className="py-24 px-6 ">
         <div className="text-center max-w-2xl mx-auto space-y-6">
           <h2 className="text-4xl md:text-5xl font-bold ">A LITTLE ABOUT ME</h2>
           <p className="text-gray-400 leading-relaxed text-lg">
@@ -38,14 +37,14 @@ export default function Home() {
       </section>
 
       {/* SKILLS SECTION */}
-      <section className="py-24 px-6 border-t border-gray-800">
+      <section className="py-24 px-6">
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-12 pb-20">
           SKILLS
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto">
           {["Programming", "Design", "Music", "Photography"].map((title, i) => (
             <Link href={slugify(title)} key={i}>
-              <div className="relative bg-white/10 border border-gray-700 backdrop-blur-md text-white rounded-xl p-10 h-40 flex items-center justify-center text-xl font-medium shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
+              <div className="relative bg-white/10  backdrop-blur-md text-white rounded-xl p-10 h-40 flex items-center justify-center text-xl font-medium shadow-lg hover:scale-105 hover:shadow-2xl hover:bg-white hover:text-black transition-all duration-300 ease-in-out">
                 {title}
                 {title === "Programming" && (
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-70 pl-15">
@@ -74,7 +73,7 @@ export default function Home() {
       </section>
 
       {/* PROJECTS SECTION */}
-      <section className="py-24 px-6 border-t border-gray-800">
+      <section className="py-24 px-6">
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-12">
           PROJECTS
         </h2>
@@ -83,12 +82,12 @@ export default function Home() {
             "TUI File Explorer",
             "Aldi Webscraper",
             "Music Visualiser",
-            "TCG Sim",
+            "Graphics Library",
             "Mycelium",
             "Fishland Saga",
           ].map((title, i) => (
             <Link href={slugify(title)} key={i}>
-              <div className="bg-white/10 border border-gray-700 backdrop-blur-md text-white rounded-xl p-6 h-40 flex items-center justify-center text-xl font-medium shadow-md hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out">
+              <div className="bg-white/10  backdrop-blur-md text-white rounded-xl p-6 h-40 flex items-center justify-center text-xl font-medium shadow-md hover:scale-105 hover:shadow-xl transition duration-300 hover:bg-white hover:text-black ease-in-out">
                 {title}
               </div>
             </Link>
@@ -97,7 +96,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section className="py-24 px-6 border-t border-gray-800 text-center">
+      <section className="py-24 px-6 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-10">CONTACT INFO</h2>
         <div className="space-y-6 text-gray-300">
           <div>
@@ -108,8 +107,8 @@ export default function Home() {
           </div>
           <div>
             <p className="text-sm tracking-wide text-gray-500">EMAIL</p>
-            <a href="mailto:luca@dev.com" className="text-xl hover:underline">
-              luca@dev.com
+            <a href="mailto:luca@dev.com" className="text-xl">
+              luca@dev.co
             </a>
           </div>
         </div>

@@ -10,6 +10,7 @@ export default function DotBackground() {
           "[background-size:20px_20px]",
           "[background-image:#d4d4d4_1px",
           "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
+          "hover:[background-size:30px_30px]"
         )}
       />
       {/* Radial gradient mask */}
