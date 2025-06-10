@@ -5,10 +5,11 @@ import KeyboardModel from "@/components/Keyboard";
 import Cube from "@/components/cube";
 import Link from "next/link";
 import { slugify } from "@/lib/slugify";
+import DotBackground from "@/components/ui/dot-background";
 
 export default function Home() {
   return (
-    <main className="bg-black text-white font-sans scroll-smooth">
+    <main className="text-white font-sans scroll-smooth">
       {/* INTRO SECTION */}
       <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-15 py-24">
         <div className="pl-8 space-y-6 max-w-xl">
@@ -22,7 +23,6 @@ export default function Home() {
         <div className="pr-90 scale-180">
           <Cube />
         </div>
-        
       </section>
 
       {/* ABOUT SECTION */}
@@ -45,10 +45,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto">
           {["Programming", "Design", "Music", "Photography"].map((title, i) => (
             <Link href={slugify(title)} key={i}>
-              <div
-                
-                className="relative bg-white/10 border border-gray-700 backdrop-blur-md text-white rounded-xl p-10 h-40 flex items-center justify-center text-xl font-medium shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out"
-              >
+              <div className="relative bg-white/10 border border-gray-700 backdrop-blur-md text-white rounded-xl p-10 h-40 flex items-center justify-center text-xl font-medium shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out">
                 {title}
                 {title === "Programming" && (
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-70 pl-15">
@@ -91,9 +88,7 @@ export default function Home() {
             "Fishland Saga",
           ].map((title, i) => (
             <Link href={slugify(title)} key={i}>
-              <div
-                className="bg-white/10 border border-gray-700 backdrop-blur-md text-white rounded-xl p-6 h-40 flex items-center justify-center text-xl font-medium shadow-md hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out"
-              >
+              <div className="bg-white/10 border border-gray-700 backdrop-blur-md text-white rounded-xl p-6 h-40 flex items-center justify-center text-xl font-medium shadow-md hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out">
                 {title}
               </div>
             </Link>
