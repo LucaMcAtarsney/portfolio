@@ -26,7 +26,7 @@ export default function Home() {
 
       <section className="min-h-screen flex flex-col md:flex-row items-center justify-between px-15 py-24 pt-280">
         <div className="pl-8 space-y-6 max-w-xl">
-          <h1 className="text-6xl md:text-6xl font-extrabold tracking-tight leading-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+          <h1 className="text-6xl md:text-6xl font-extrabold tracking-tight leading-tight bg-clip-text">
             Hi, I&apos;m Luca McAtarsney
           </h1>
           <p className="text-lg md:text-2xl text-gray-400">
