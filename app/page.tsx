@@ -1,5 +1,4 @@
 import DodecahedronScene from "@/components/DodecahedronScene";
-import Image from "next/image";
 import ComputerModel from "@/components/Computer";
 import CameraModel from "@/components/Camera";
 import KeyboardModel from "@/components/Keyboard";
@@ -20,7 +19,10 @@ export default function Home() {
             I like making stuff.
           </p>
         </div>
-        <Cube />
+        <div className="pr-90 scale-180">
+          <Cube />
+        </div>
+        
       </section>
 
       {/* ABOUT SECTION */}
@@ -42,9 +44,9 @@ export default function Home() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto">
           {["Programming", "Design", "Music", "Photography"].map((title, i) => (
-            <Link href={slugify(title)}>
+            <Link href={slugify(title)} key={i}>
               <div
-                key={i}
+                
                 className="relative bg-white/10 border border-gray-700 backdrop-blur-md text-white rounded-xl p-10 h-40 flex items-center justify-center text-xl font-medium shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out"
               >
                 {title}
@@ -88,9 +90,8 @@ export default function Home() {
             "Mycelium",
             "Fishland Saga",
           ].map((title, i) => (
-            <Link href={slugify(title)}>
+            <Link href={slugify(title)} key={i}>
               <div
-                key={i}
                 className="bg-white/10 border border-gray-700 backdrop-blur-md text-white rounded-xl p-6 h-40 flex items-center justify-center text-xl font-medium shadow-md hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out"
               >
                 {title}
