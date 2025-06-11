@@ -2,6 +2,7 @@ import GithubLogo from "@/components/GithubLogo";
 import Link from "next/link";
 import { slugify } from "@/lib/slugify";
 import LinkedInModel from "@/components/LinkedIn";
+import EmailModel from "@/components/Email";
 
 export default function CONTACT() {
   return (
@@ -14,7 +15,6 @@ export default function CONTACT() {
               (title, i) => (
                 <Link href={slugify(title)} key={i}>
                   <div className="relative bg-white/10  backdrop-blur-md text-white rounded-xl p-10 h-40 flex items-center justify-center text-xl font-medium shadow-lg hover:scale-105 hover:shadow-2xl hover:bg-white hover:text-black transition-all duration-300 ease-in-out">
-                  <p>{title}</p>
                     {title === "Github" && (
                         <GithubLogo />
                     )}
@@ -24,7 +24,8 @@ export default function CONTACT() {
                       </div>
                     )}
                     {title === "Email" && (
-                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-75 pl-12">
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none scale-90 pt-12 pl-3">
+                        <EmailModel />
                       </div>
                     )}
                   </div>
