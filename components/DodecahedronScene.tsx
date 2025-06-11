@@ -17,7 +17,7 @@ function RotatingDodecahedron() {
   return (
     <mesh ref={ref}>
       <dodecahedronGeometry args={[1, 0]} />
-      <meshStandardMaterial color="white" />
+      <meshStandardMaterial color="orange" />
     </mesh>
   )
 }
